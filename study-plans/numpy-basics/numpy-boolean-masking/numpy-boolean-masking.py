@@ -6,4 +6,4 @@ def row_summary(data, threshold):
     return np.array([np.array(data>threshold, dtype = "float64"),
                      [x if np.any(x > threshold) else np.zeros(x.shape) for x in data],
                      [x if np.all(x > threshold) else np.zeros(x.shape) for x in data]
-                    ])
+                    ]) 
