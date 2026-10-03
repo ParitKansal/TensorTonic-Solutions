@@ -14,4 +14,4 @@ def embed_tokens(embedding: nn.Embedding, tokens: torch.Tensor, d_model: int) ->
     """
     Returns scaled token embeddings.
     """
-    return embedding(tokens) * math.sqrt(d_model)
+    return embedding(tokens)* torch.sqrt(torch.tensor(d_model))
